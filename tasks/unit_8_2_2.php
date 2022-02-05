@@ -29,13 +29,13 @@ interface IEmployee extends IUser
 
 class Employee implements IEmployee
 {
-   private $first_name = '';
-   private $last_name = '';
-   private $gender = '';
-   private $age = 0;
-   private $height = 0;
-   private $weight = 0;
-   private $salary = 0;
+   private string $first_name;
+   private string $last_name;
+   private string $gender;
+   private int $age;
+   private int $height;
+   private int $weight;
+   private int $salary;
 
 
 
@@ -157,13 +157,6 @@ echo '<br>';
 // second employee==============================================================
 $objEmployee1 = new Employee();
 
-$objEmployee1 -> setFirstName('Volodumyr');
-$objEmployee1 -> setLastName("Voloshko");
-$objEmployee1 -> setGender('man');
-$objEmployee1 -> setAge(30);
-$objEmployee1 -> setHeight(190);
-$objEmployee1 -> setWeight(85);
-$objEmployee1 -> setSalary(5000);
 
 
 
@@ -181,6 +174,21 @@ echo $objEmployee1 -> getWeight();
 echo '<br>';
 echo $objEmployee1 -> getSalary();
 echo '<br>';
+
+
+
+
+$objEmployee1 -> setFirstName('Volodumyr');
+$objEmployee1 -> setLastName("Voloshko");
+$objEmployee1 -> setGender('man');
+$objEmployee1 -> setAge(30);
+$objEmployee1 -> setHeight(190);
+$objEmployee1 -> setWeight(85);
+$objEmployee1 -> setSalary(5000);
+
+
+
+
 // second employee==============================================================
 
 
