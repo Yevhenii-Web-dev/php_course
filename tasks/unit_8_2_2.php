@@ -24,7 +24,7 @@ interface IUser
 interface IEmployee extends IUser
 {
    public function getSalary();
-   public function setSalary();
+   public function setSalary($salary);
 }
 
 class Employee implements IEmployee
@@ -45,7 +45,7 @@ class Employee implements IEmployee
       return $this -> first_name;
    }
 
-   public function setFirstName($first_name)
+   public function setFirstName($first_name): void
    {
       $this -> first_name = $first_name;
    }
@@ -57,7 +57,7 @@ class Employee implements IEmployee
       return $this-> last_name;
    }
 
-   public function setLastName($last_name)
+   public function setLastName($last_name): void
    {
       $this -> last_name = $last_name;
    }
@@ -69,7 +69,7 @@ class Employee implements IEmployee
       return $this -> age;
    }
 
-   public function setAge($age)
+   public function setAge($age): void
    {
       $this -> age = $age;
    }
@@ -81,7 +81,7 @@ class Employee implements IEmployee
       return $this -> gender;
    }
 
-   public function setGender($gender)
+   public function setGender($gender): void
    {
       $this -> gender = $gender;
    }
@@ -93,7 +93,7 @@ class Employee implements IEmployee
       return $this -> height;
    }
 
-   public function setHeight($height)
+   public function setHeight($height): void
    {
       $this -> height = $height;
    }
@@ -105,7 +105,7 @@ class Employee implements IEmployee
       return $this -> weight;
    }
 
-   public function setWeight($weight)
+   public function setWeight($weight): void
    {
       $this -> weight = $weight;
    }
@@ -117,7 +117,7 @@ class Employee implements IEmployee
       return $this -> salary;
    }
 
-   public function setSalary($salary)
+   public function setSalary($salary): void
    {
       $this -> salary = $salary;
    }
