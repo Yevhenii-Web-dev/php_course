@@ -1,0 +1,187 @@
+<?
+
+interface IUser
+{
+   public function getFirstName();
+   public function setFirstName($first_name);
+
+   public function getLastName();
+   public function setLastName($last_name);
+
+   public function getAge();
+   public function setAge($age);
+
+   public function getGender();
+   public function setGender($gender);
+
+   public function getHeight();
+   public function setHeight($height);
+
+   public function getWeight();
+   public function setWeight($weight);
+}
+
+interface IEmployee extends IUser
+{
+   public function getSalary();
+   public function setSalary();
+}
+
+class Employee implements IEmployee
+{
+   private $first_name = '';
+   private $last_name = '';
+   private $gender = '';
+   private $age = 0;
+   private $height = 0;
+   private $weight = 0;
+   private $salary = 0;
+
+
+
+
+   public function getFirstName(): string
+   {
+      return $this -> first_name;
+   }
+
+   public function setFirstName($first_name)
+   {
+      $this -> first_name = $first_name;
+   }
+
+
+
+   public function getLastName(): string
+   {
+      return $this-> last_name;
+   }
+
+   public function setLastName($last_name)
+   {
+      $this -> last_name = $last_name;
+   }
+
+
+
+   public function getAge(): int
+   {
+      return $this -> age;
+   }
+
+   public function setAge($age)
+   {
+      $this -> age = $age;
+   }
+
+
+
+   public function getGender(): string
+   {
+      return $this -> gender;
+   }
+
+   public function setGender($gender)
+   {
+      $this -> gender = $gender;
+   }
+
+
+
+   public function getHeight(): int
+   {
+      return $this -> height;
+   }
+
+   public function setHeight($height)
+   {
+      $this -> height = $height;
+   }
+
+
+
+   public function getWeight(): int
+   {
+      return $this -> weight;
+   }
+
+   public function setWeight($weight)
+   {
+      $this -> weight = $weight;
+   }
+
+
+
+   public function getSalary(): int
+   {
+      return $this -> salary;
+   }
+
+   public function setSalary($salary)
+   {
+      $this -> salary = $salary;
+   }
+
+}
+// first employee==============================================================
+$objEmployee = new Employee();
+
+$objEmployee -> setFirstName('Natalia');
+$objEmployee -> setLastName("Voloshko");
+$objEmployee -> setGender('wuman');
+$objEmployee -> setAge(25);
+$objEmployee -> setHeight(165);
+$objEmployee -> setWeight(50);
+$objEmployee -> setSalary(3000);
+
+
+
+echo $objEmployee -> getFirstName();
+echo '<br>';
+echo $objEmployee -> getLastName();
+echo '<br>';
+echo $objEmployee -> getAge();
+echo '<br>';
+echo $objEmployee -> getGender();
+echo '<br>';
+echo $objEmployee -> getHeight();
+echo '<br>';
+echo $objEmployee -> getWeight();
+echo '<br>';
+echo $objEmployee -> getSalary();
+echo '<br>';
+// first employee==============================================================
+
+
+
+// second employee==============================================================
+$objEmployee1 = new Employee();
+
+$objEmployee1 -> setFirstName('Volodumyr');
+$objEmployee1 -> setLastName("Voloshko");
+$objEmployee1 -> setGender('man');
+$objEmployee1 -> setAge(30);
+$objEmployee1 -> setHeight(190);
+$objEmployee1 -> setWeight(85);
+$objEmployee1 -> setSalary(5000);
+
+
+
+echo $objEmployee1 -> getFirstName();
+echo '<br>';
+echo $objEmployee1 -> getLastName();
+echo '<br>';
+echo $objEmployee1 -> getAge();
+echo '<br>';
+echo $objEmployee1 -> getGender();
+echo '<br>';
+echo $objEmployee1 -> getHeight();
+echo '<br>';
+echo $objEmployee1 -> getWeight();
+echo '<br>';
+echo $objEmployee1 -> getSalary();
+echo '<br>';
+// second employee==============================================================
+
+
+?>
